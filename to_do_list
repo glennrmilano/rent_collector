@@ -1,0 +1,138 @@
+AI-Powered Rent Collector MVP - Master Todo List
+
+  Phase 1: Foundation Setup (Days 1-3)
+
+  Database & Backend Setup
+
+  - Set up Supabase project and configure authentication
+  - Create Supabase database schema (tenants, payments, communications, ai_communications tables)
+  - Set up Pinecone account and create vector collections (tenant_contexts, message_templates)
+  - Configure AWS S3 bucket for document storage with proper IAM permissions
+  - Test all database connections and basic CRUD operations
+
+  n8n Environment Setup
+
+  - Set up n8n Cloud account and workspace
+  - Configure environment variables and secrets (OpenAI API key, Pinecone API key, Supabase keys, AWS credentials)
+  - Set up webhook endpoints and basic authentication
+  - Create folder structure for organizing workflows
+  - Test basic connectivity to all external services
+
+  Phase 2: Core Data Management (Days 4-6)
+
+  Tenant Management System
+
+  - Build tenant registration workflow (manual trigger → validate data → store in Supabase)
+  - Create tenant update/edit workflow with data validation
+  - Build tenant search and retrieval workflows
+  - Implement tenant status management (active/inactive)
+  - Create basic tenant dashboard data aggregation workflow
+
+  Payment Tracking System
+
+  - Build payment recording workflow (manual entry with validation)
+  - Create payment history retrieval and calculation workflows
+  - Implement payment status calculator (current/late/overdue logic)
+  - Build payment summary and reporting workflows
+  - Create payment receipt generation and email workflow
+
+  Phase 3: AI Context & Vector Storage (Days 7-9)
+
+  Pinecone Integration
+
+  - Build tenant context embedding generation workflow (tenant data → OpenAI embeddings → Pinecone storage)
+  - Create communication history vectorization workflow
+  - Build semantic search workflow for similar tenant situations
+  - Implement context retrieval workflow for AI message generation
+  - Create embedding update workflow for continuous learning
+
+  AI Communication Engine
+
+  - Build AI prompt generation workflow using tenant context
+  - Create OpenAI integration workflow for message generation
+  - Implement tone and sentiment analysis for message customization
+  - Build message effectiveness tracking and feedback loop
+  - Create communication template management system
+
+  Phase 4: Automated Reminder System (Days 10-12)
+
+  Smart Reminder Workflows
+
+  - Build daily payment status checker (scheduled workflow)
+  - Create context-aware reminder generation (Pinecone context → AI → personalized message)
+  - Implement progressive reminder escalation system (friendly → formal → urgent)
+  - Build reminder scheduling and timing optimization
+  - Create email delivery workflow with error handling and retry logic
+
+  Communication Management
+
+  - Build communication logging and history tracking
+  - Create response tracking and effectiveness measurement
+  - Implement communication frequency optimization
+  - Build tenant communication preferences management
+  - Create communication analytics and reporting
+
+  Phase 5: Intelligence & Learning (Days 13-15)
+
+  AI Learning System
+
+  - Build tenant behavior pattern analysis workflow
+  - Create message effectiveness scoring and optimization
+  - Implement similar situation matching and recommendation system
+  - Build predictive risk scoring based on communication patterns
+  - Create automated strategy adjustment based on success metrics
+
+  Dashboard & Insights
+
+  - Build landlord dashboard data aggregation workflow
+  - Create tenant risk assessment and alert system
+  - Implement actionable insights generation
+  - Build performance metrics and KPI tracking
+  - Create automated reporting and summary generation
+
+  Phase 6: Testing & Optimization (Days 16-18)
+
+  System Testing
+
+  - End-to-end workflow testing with sample data
+  - AI response quality testing and prompt optimization
+  - Error handling and edge case testing
+  - Performance testing and optimization
+  - Security testing and data protection validation
+
+  Refinement & Polish
+
+  - Fine-tune AI prompts for better message quality
+  - Optimize Pinecone queries for faster context retrieval
+  - Improve email templates and formatting
+  - Add comprehensive error logging and monitoring
+  - Create user documentation and workflow guides
+
+  Phase 7: Deployment & Launch (Days 17-18)
+
+  Production Preparation
+
+  - Configure production environment settings
+  - Set up monitoring and alerting for critical workflows
+  - Create backup and disaster recovery procedures
+  - Implement data export and migration tools
+  - Perform final security and compliance review
+
+  Go-Live Activities
+
+  - Import real tenant data and test with live data
+  - Train system with initial communication examples
+  - Monitor first week of automated operations
+  - Collect feedback and identify immediate improvements
+  - Document lessons learned and next phase planning
+
+  ---
+  Sub-Agent Strategy: I'll use specialized agents for each major component:
+  - Database Agent: Handle all Supabase schema and data operations
+  - AI Agent: Focus on OpenAI integration and prompt optimization
+  - Vector Agent: Manage all Pinecone operations and embeddings
+  - Workflow Agent: Build and test n8n workflows
+  - Integration Agent: Handle external service connections (AWS, email, etc.)
+
+  Estimated Timeline: 18 days (2.5 weeks)
+  Total Tasks: 52 specific, actionable items
